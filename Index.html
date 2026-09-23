@@ -13,9 +13,18 @@
 </head>
 <body class="bg-gray-100 flex flex-col min-h-screen">
 
-    <!-- Encabezado -->
-    <header class="bg-red-800 text-white p-6 shadow-md">
-        <h1 class="text-3xl font-bold text-center">Dashboard de Estrategias de Salud por Distrito</h1>
+   <!-- Encabezado con Logotipo -->
+    <header class="bg-blue-800 text-white p-4 md:p-6 shadow-md flex justify-between items-center">
+        <!-- Espaciador izquierdo (invisible) para mantener el título exactamente al centro -->
+        <div class="w-16 md:w-24 hidden sm:block"></div> 
+        
+        <h1 class="text-xl md:text-3xl font-bold text-center flex-1">Dashboard de Estrategias de Salud por Distrito</h1>
+        
+        <!-- Contenedor del Logotipo (Parte superior derecha) -->
+        <div class="w-16 md:w-24 flex justify-end">
+            <!-- CAMBIA "logo.png" POR EL NOMBRE DE TU ARCHIVO O EL ENLACE DE TU IMAGEN -->
+            <img src="https://drive.google.com/file/d/1RC0GT6QeruXtBkyD-E9rPqkFiBrjmNxr/view?usp=drive_link" alt="Logotipo" class="max-h-12 md:max-h-16 object-contain">
+        </div>
     </header>
 
     <main class="flex-grow p-6 w-full max-w-7xl mx-auto">
