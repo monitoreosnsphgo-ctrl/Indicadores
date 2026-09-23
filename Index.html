@@ -175,7 +175,7 @@
             data.forEach(d => {
                 let listHtml = '';
                 d.estrategias.forEach(est => {
-                    let colorClass = est.cump >= 80 ? 'bg-green-500' : (est.cump >= 50 ? 'bg-yellow-500' : 'bg-red-500');
+                   let colorClass = est.cump >= 80 ? 'bg-green-500' : (est.cump >= 50 ? 'bg-yellow-500' : 'bg-red-500');
                     
                     // Modificación: Agregamos "Realizados de Programados" junto al nombre
                     let real = est.real || 0;
