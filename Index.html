@@ -177,6 +177,9 @@
                 d.estrategias.forEach(est => {
                    let colorClass = est.cump >= 80 ? 'bg-green-500' : (est.cump >= 50 ? 'bg-yellow-500' : 'bg-red-500');
                     
+                    // Limitamos el ancho visual de la barra a un máximo de 100%
+                    let barWidth = est.cump > 100 ? 100 : est.cump;
+
                     // Modificación: Agregamos "Realizados de Programados" junto al nombre
                     let real = est.real || 0;
                     let prog = est.prog || 0;
@@ -187,10 +190,12 @@
                             <span class="text-gray-700 font-semibold leading-tight w-3/4">
                                 ${est.nombre}: <span class="font-normal text-gray-500">${real} de ${prog}</span>
                             </span>
+                            <!-- Aquí se sigue mostrando el porcentaje real, incluso si es 120% -->
                             <span class="text-gray-900 font-bold w-1/4 text-right">${est.cump}%</span>
                         </div>
-                        <div class="w-full bg-gray-200 rounded-full h-2">
-                            <div class="${colorClass} h-2 rounded-full" style="width: ${est.cump}%"></div>
+                        <div class="w-full bg-gray-200 rounded-full h-2 overflow-hidden">
+                            <!-- Aquí usamos barWidth para que la barra nunca mida más del 100% -->
+                            <div class="${colorClass} h-2 rounded-full" style="width: ${barWidth}%"></div>
                         </div>
                     </div>`;
                 });
